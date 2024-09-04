@@ -28,7 +28,7 @@ const InfluencerList = () => {
   // Faz a requisição para buscar todos os influenciadores ao carregar a página
   useEffect(() => {
     const fetchInfluencers = async () => {
-      const response = await axios.get('http://localhost:3001/api/influencers');
+      const response = await axios.get('http://localhost:3009/api/influencers');
       setInfluencers(response.data); // Atualiza a lista de influenciadores
     };
     fetchInfluencers();

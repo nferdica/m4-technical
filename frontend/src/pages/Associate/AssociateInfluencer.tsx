@@ -15,7 +15,7 @@ const AssociateInfluencer = () => {
   useEffect(() => {
     const fetchInfluencers = async () => {
       try {
-        const response = await axios.get('http://localhost:3001/api/influencers'); // Busca os influenciadores
+        const response = await axios.get('http://localhost:3009/api/influencers'); // Busca os influenciadores
         setInfluencers(response.data);
       } catch (error) {
         toast.error('Erro ao buscar influenciadores!');
@@ -24,7 +24,7 @@ const AssociateInfluencer = () => {
 
     const fetchBrands = async () => {
       try {
-        const response = await axios.get('http://localhost:3001/api/brands'); // Busca as marcas
+        const response = await axios.get('http://localhost:3009/api/brands'); // Busca as marcas
         setBrands(response.data);
       } catch (error) {
         toast.error('Erro ao buscar marcas!');
@@ -39,7 +39,7 @@ const AssociateInfluencer = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      await axios.post(`http://localhost:3001/api/brands/${selectedBrand}/associate-influencer`, {
+      await axios.post(`http://localhost:3009/api/brands/${selectedBrand}/associate-influencer`, {
         influencerId: selectedInfluencer,
       });
       toast.success('Influenciador associado à marca com sucesso!');

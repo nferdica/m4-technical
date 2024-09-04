@@ -59,7 +59,7 @@ const InfluencerForm: React.FC = () => {
     }
 
     try {
-      await axios.post('http://localhost:3001/api/influencers', formData, {
+      await axios.post('http://localhost:3009/api/influencers', formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
       toast.success('Influenciador cadastrado com sucesso!');

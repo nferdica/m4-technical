@@ -23,7 +23,7 @@ const EditInfluencer = () => {
   // Função para buscar dados do influenciador pelo ID
   useEffect(() => {
     const fetchInfluencer = async () => {
-      const response = await axios.get(`http://localhost:3001/api/influencers/${id}`);
+      const response = await axios.get(`http://localhost:3009/api/influencers/${id}`);
       const { name, niche, reach, photo, instagram, address } = response.data;
       setName(name);
       setNiche(niche);
@@ -87,7 +87,7 @@ const EditInfluencer = () => {
     }
 
     try {
-      await axios.put(`http://localhost:3001/api/influencers/${id}`, formData, {
+      await axios.put(`http://localhost:3009/api/influencers/${id}`, formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
       toast.success('Influenciador atualizado com sucesso!');

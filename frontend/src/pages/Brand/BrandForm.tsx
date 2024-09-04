@@ -15,7 +15,7 @@ const BrandForm = () => {
     e.preventDefault();
     try {
       const newBrand = { name, description, niche };
-      await axios.post('http://localhost:3001/api/brands', newBrand); // Envia os dados para o backend
+      await axios.post('http://localhost:3009/api/brands', newBrand); // Envia os dados para o backend
       toast.success('Marca cadastrada com sucesso!'); // Exibe mensagem de sucesso
       navigate('/brands'); // Redireciona para a lista de marcas após o cadastro
     } catch (error) {

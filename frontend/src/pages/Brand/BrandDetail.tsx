@@ -14,7 +14,7 @@ const BrandDetail = () => {
   // Busca detalhes da marca ao montar o componente
   useEffect(() => {
     const fetchBrand = async () => {
-      const response = await axios.get(`http://localhost:3001/api/brands/${id}`);
+      const response = await axios.get(`http://localhost:3009/api/brands/${id}`);
       setBrand(response.data); // Armazena os detalhes da marca
     };
     fetchBrand();
@@ -23,7 +23,7 @@ const BrandDetail = () => {
   // Função para desassociar um influenciador da marca
   const handleDisassociate = async (influencerId: string) => {
     try {
-      await axios.post(`http://localhost:3001/api/brands/${id}/disassociate-influencer`, {
+      await axios.post(`http://localhost:3009/api/brands/${id}/disassociate-influencer`, {
         influencerId,
       });
       toast.success('Influenciador desassociado da marca com sucesso!'); // Mensagem de sucesso

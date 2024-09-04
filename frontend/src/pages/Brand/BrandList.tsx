@@ -26,7 +26,7 @@ const BrandList = () => {
   // Faz a requisição para buscar todas as marcas quando o componente é montado
   useEffect(() => {
     const fetchBrands = async () => {
-      const response = await axios.get('http://localhost:3001/api/brands');
+      const response = await axios.get('http://localhost:3009/api/brands');
       setBrands(response.data); // Armazena as marcas no estado
     };
     fetchBrands();

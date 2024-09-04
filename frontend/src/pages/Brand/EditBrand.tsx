@@ -14,7 +14,7 @@ const EditBrand = () => {
   // Busca os dados da marca ao carregar a página
   useEffect(() => {
     const fetchBrand = async () => {
-      const response = await axios.get(`http://localhost:3001/api/brands/${id}`);
+      const response = await axios.get(`http://localhost:3009/api/brands/${id}`);
       const { name, description, niche } = response.data;
       setName(name);
       setDescription(description);
@@ -28,7 +28,7 @@ const EditBrand = () => {
     e.preventDefault();
     try {
       const updatedBrand = { name, description, niche }; // Dados atualizados da marca
-      await axios.put(`http://localhost:3001/api/brands/${id}`, updatedBrand); // Atualiza a marca no backend
+      await axios.put(`http://localhost:3009/api/brands/${id}`, updatedBrand); // Atualiza a marca no backend
       toast.success('Marca atualizada com sucesso!');
       navigate('/brands'); // Redireciona para a lista de marcas
     } catch (error) {

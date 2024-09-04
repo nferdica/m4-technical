@@ -14,7 +14,7 @@ const InfluencerSearch = () => {
     e.preventDefault();
     try {
       // Requisição para buscar influenciadores com base nos filtros
-      const response = await axios.get('http://localhost:3001/api/influencers/search', {
+      const response = await axios.get('http://localhost:3009/api/influencers/search', {
         params: { niche, minReach, maxReach }
       });
       setResults(response.data);  // Armazena os resultados no estado
