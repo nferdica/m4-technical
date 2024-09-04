@@ -15,8 +15,12 @@ const app = express();
 // Conectar ao banco de dados
 connectDB();
 
-// Middlewares
-app.use(cors());  // Permite requisições de outras origens (CORS)
+// Permite requisições de outras origens (CORS)
+app.use(cors({
+  origin: 'http://localhost:3000',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true
+}));
 app.use(express.json());  // Faz o parsing de JSON no body das requisições
 
 // Rota para servir imagens estáticas
