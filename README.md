@@ -2,7 +2,7 @@
 
 Este projeto é uma plataforma de gerenciamento de influenciadores, desenvolvida utilizando **Node.js**, **Express**, **React**, **MongoDB** e outras tecnologias. A plataforma permite a criação, edição, visualização e associação de influenciadores e marcas, além de autenticação de usuários.
 
-- [Deploy](https://agency.nferdica.com)
+[Deploy](https://agency.nferdica.com)
 
 ## Índice
 - [Pré-requisitos](#pré-requisitos)
@@ -91,7 +91,7 @@ JWT_SECRET=
 1. Para iniciar o servidor do backend, execute:
 
 ```bash
-npm run dev
+npm run start
 ```
 
 2. Isso iniciará o servidor em modo de desenvolvimento. O backend estará acessível em `http://localhost:3001`.
@@ -101,7 +101,7 @@ npm run dev
 1. Para iniciar o frontend, navegue até o diretório `frontend` e execute:
 
 ```bash
-npm start
+npm run start
 ```
 
 2. Isso iniciará o frontend da aplicação, que estará acessível em `http://localhost:3000`.
