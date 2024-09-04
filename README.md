@@ -2,6 +2,8 @@
 
 Este projeto é uma plataforma de gerenciamento de influenciadores, desenvolvida utilizando **Node.js**, **Express**, **React**, **MongoDB** e outras tecnologias. A plataforma permite a criação, edição, visualização e associação de influenciadores e marcas, além de autenticação de usuários.
 
+- [Deploy](https://agency.nferdica.com)
+
 ## Índice
 - [Pré-requisitos](#pré-requisitos)
 - [Instalação](#instalação)
