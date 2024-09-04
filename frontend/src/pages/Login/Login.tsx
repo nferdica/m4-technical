@@ -37,7 +37,7 @@ const Login = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:3009/api/auth/login', { email, password });
+      const response = await axios.post('http://localhost:3009/api/auth/login', { email, password }, {withCredentials: true});
       localStorage.setItem('token', response.data.token); // Armazena o token no localStorage
       toast.success('Login feito com sucesso!'); // Exibe mensagem de sucesso
       navigate('/'); // Redireciona para a página inicial após login bem-sucedido
