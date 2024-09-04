@@ -38,7 +38,7 @@ const Register = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:3009/api/auth/register', { name, email, password }, {withCredentials: true});
+      const response = await axios.post('http://localhost:3009/api/auth/register', { name, email, password });
       localStorage.setItem('token', response.data.token); // Armazena o token no localStorage
       toast.success('Usuário registrado com sucesso!'); // Mensagem de sucesso
       navigate('/dashboard'); // Redireciona para o dashboard após sucesso
