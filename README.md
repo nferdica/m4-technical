@@ -148,8 +148,8 @@ Aqui estão alguns dos principais endpoints da API:
 
 ### Ferramentas adicionais:
 
-`react-toastify`: Exibe notificações para o usuário
-`dotenv`: Gerenciamento de variáveis de ambiente
+- `react-toastify`: Exibe notificações para o usuário
+- `dotenv`: Gerenciamento de variáveis de ambiente
 
 ## Contribuindo
 
